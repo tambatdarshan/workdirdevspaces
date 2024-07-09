@@ -1,0 +1,17 @@
+schemaVersion: 2.1.0
+metadata:
+  name: folder_based
+projects:
+  - name: openshift-test1
+    git:
+      remotes:
+        origin: https://github.com/vitaliy-guliy/openshift_test.git
+      checkoutFrom:
+        revision: folder-based-2
+components:
+  - name: tools
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel8
+      env:
+        - name: VSCODE_DEFAULT_WORKSPACE
+          value: "/"
